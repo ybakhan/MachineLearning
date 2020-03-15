@@ -89,7 +89,7 @@ namespace NeuralNetwork
             mse = 0;
             for (int i = 0; i < config.Target; i++)
             {
-                oTarget[i] = Sigmoid(WeightedSum(i, oHidden, wTarget) + tBias);
+                oTarget[i] = Sigmoid(WeightedSum(i, oHidden, wTarget));
                 mse += SquaredError(target[i], oTarget[i]);
             }
         }
